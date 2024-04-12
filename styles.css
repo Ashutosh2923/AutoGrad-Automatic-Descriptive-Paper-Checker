@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #8e9eab, #eef2f3);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, #333, #555);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: header-glow 2s infinite alternate;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    animation: form-slide 1s ease;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+    border-color: #555;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Result Styles */
+.result-container {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+    animation: result-slide 1s ease;
+}
+
+.result-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-info p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.grade {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    animation: grade-pulse 2s infinite;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Animations */
+@keyframes header-glow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes form-slide {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes result-slide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grade-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Team Members Styles */
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+.team-member {
+    margin: 0 10px;
+}
