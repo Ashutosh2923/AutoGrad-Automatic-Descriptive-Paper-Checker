@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Comparison Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>AutoGrade - Automated Descriptive Paper Checker
+        </h1>
+    </header>
+
+    <div class="result-container">
+        <!-- Display the comparison result table -->
+        {{ result | safe }}
+
+        <!-- Display total marks, marks obtained, percentage obtained, and grade -->
+        <div class="result-info">
+            <p>Total Marks: {{ total_marks }}</p>
+            <p>Marks Obtained: {{ marks_obtained }}</p>
+            <p>Percentage Obtained: {{ percentage_obtained | round(2) }}%</p>
+            <p class="grade">
+                Grade:
+                {% if percentage_obtained >= 91 %}
+                    A
+                {% elif percentage_obtained >= 81 %}
+                    B
+                {% elif percentage_obtained >= 71 %}
+                    C
+                {% elif percentage_obtained >= 61 %}
+                    D
+                {% elif percentage_obtained >= 51 %}
+                    E
+                {% else %}
+                    F
+                {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <div class="team-members">
+        <span class="team-member">Rahul Suryawanshi</span>
+        <span class="team-member">|</span>
+        <span class="team-member">Aniket Jaiswal</span>
+        <span class="team-member">|</span>
+        <span class="team-member">Ashutosh Jadhav</span>
+    </div>
+</body>
+</html>
